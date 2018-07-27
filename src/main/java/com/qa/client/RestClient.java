@@ -16,6 +16,10 @@ import org.apache.http.impl.client.HttpClients;
 import org.apache.http.util.EntityUtils;
 import org.json.JSONObject;
 
+import io.restassured.RestAssured;
+import io.restassured.response.Response;
+import io.restassured.specification.RequestSpecification;
+
 public class RestClient {
 	
 	//1.Get Method without Headers
@@ -55,5 +59,35 @@ public class RestClient {
 		}
 		CloseableHttpResponse httpResponse=httpClient.execute(httppost);
 		return httpResponse;
+	}
+	
+	public Response post(String url){
+		
+		RequestSpecification request=RestAssured.given();
+		request.header("Content-Type","application/json");
+		JSONObject json=new JSONObject();
+		json.put("id", "25");
+		json.put("title", "Selenium");
+		json.put("author", "Mahesh");
+		
+		String jsonString=json.toString();
+		
+		request.body(jsonString);
+		Response response=request.post(url);
+		return response;
+	}
+	
+	public Response put(String url){
+		RequestSpecification request=RestAssured.given();
+		request.header("Content-Type","application/json");
+		JSONObject json=new JSONObject();
+		json.put("name", "Mahesh");
+		json.put("job", "zion resident");
+				
+		String jsonString=json.toString();
+		
+		request.body(jsonString);
+		Response response=request.post(url);
+		return response;
 	}
 }

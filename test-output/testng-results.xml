@@ -1,17 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+<testng-results skipped="0" failed="0" ignored="2" total="3" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="5384" started-at="2018-07-26T07:28:18Z" finished-at="2018-07-26T07:28:23Z">
+  <suite name="Default suite" duration-ms="2686" started-at="2018-07-27T06:16:11Z" finished-at="2018-07-27T06:16:14Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="5384" started-at="2018-07-26T07:28:18Z" finished-at="2018-07-26T07:28:23Z">
-      <class name="com.qa.tests.GetUsingRestAssured">
-        <test-method status="PASS" signature="getUsingRest()[pri:0, instance:com.qa.tests.GetUsingRestAssured@1b604f19]" name="getUsingRest" duration-ms="5317" started-at="2018-07-26T07:28:18Z" finished-at="2018-07-26T07:28:23Z">
+    <test name="Default test" duration-ms="2686" started-at="2018-07-27T06:16:11Z" finished-at="2018-07-27T06:16:14Z">
+      <class name="com.qa.tests.UsingSimpleJson">
+        <test-method status="PASS" signature="setup()[pri:0, instance:com.qa.tests.UsingSimpleJson@1d057a39]" name="setup" is-config="true" duration-ms="6" started-at="2018-07-27T06:16:11Z" finished-at="2018-07-27T06:16:11Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- getUsingRest -->
-      </class> <!-- com.qa.tests.GetUsingRestAssured -->
+        </test-method> <!-- setup -->
+        <test-method status="PASS" signature="deleteAPI()[pri:0, instance:com.qa.tests.UsingSimpleJson@1d057a39]" name="deleteAPI" duration-ms="2649" started-at="2018-07-27T06:16:11Z" finished-at="2018-07-27T06:16:14Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- deleteAPI -->
+      </class> <!-- com.qa.tests.UsingSimpleJson -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
